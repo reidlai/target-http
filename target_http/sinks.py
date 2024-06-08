@@ -18,15 +18,16 @@ class httpSink(RecordSink):
         url = self.config.get('url')
         
         # Headers
-        headers = self.config.get('headers', [])
-        headerObject = {}
-        for header in headers:
-            headerObject[header['name']] = header['value']
-        
+        headers = self.config.get('headers', {})
+    
         # HTTP Method
         method = self.config.get('method', 'GET') 
         if method == 'GET':
-            self.req = Request('GET', url, headers=headerObject, data=record)
+            # Static query parameters
+            queryParams = self.config.get('queryParams', {})
+            
+            # Dynamically map some 
+            self.req = Request('GET', url, headers=headerObject)
         elif method == 'POST':  
             self.req = Request('POST', url, headers=headerObject, data=record)
         

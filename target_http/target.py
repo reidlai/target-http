@@ -17,16 +17,35 @@ class Targethttp(Target):
 
     config_jsonschema = th.PropertiesList(
         th.Property(
-            "url",
-            th.StringType,
-            description="The URL to which to send data",
-            
+            "headers",
+            th.ObjectType(
+                additional_properties=True,
+            ),
+            description="The path to the target output file",
+            required=False,
         ),
         th.Property(
             "method",
             th.StringType,
             description="HTTP Method",
             allowed_values=["GET", "POST"],
+            required=True,
+        ),
+        th.Property(
+            "queryParams",
+            th.ObjectType(
+                additional_properties=True,
+            ),
+            description="Static Query parameters",
+            required=False,
+        ),
+        th.Property(
+            "recordToQueryParamsMapping",
+            th.ObjectType(
+                additional_properties=True,
+            ),
+            description="Record to Query Parameters Mapping",
+            required=False,
         ),
         th.Property(
             "tls",
@@ -37,16 +56,13 @@ class Targethttp(Target):
                 th.Property("cacert_file_path", th.StringType, required=False),
             ),
             description="TLS Properties",
+            required=False,
         ),
         th.Property(
-            "headers",
-            th.ArrayType(
-                th.ObjectType(
-                    th.Property("name", th.StringType),
-                    th.Property("value", th.StringType),
-                )
-            ),
-            description="The path to the target output file",
+            "url",
+            th.StringType,
+            description="The URL to which to send data",
+            required=True,
         ),
     ).to_dict()
 
