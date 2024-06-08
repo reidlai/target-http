@@ -1,0 +1,72 @@
+{
+    "sessionID": "393351724530794497",
+    "stateID": "393351724530925569",
+    "stepID": "104",
+    "scopeKeyCount": 6,
+    "inputData": {
+        "test2": {}
+    },
+    "inputDataType": "Vars",
+    "request": {
+        "Method": "POST",
+        "URL": {
+            "Scheme": "",
+            "Opaque": "",
+            "User": null,
+            "Host": "",
+            "Path": "/test_module/create_record",
+            "RawPath": "",
+            "OmitHost": false,
+            "ForceQuery": false,
+            "RawQuery": "",
+            "Fragment": "",
+            "RawFragment": ""
+        },
+        "Header": {
+            "Accept": [
+                "application/json"
+            ],
+            "Accept-Encoding": [
+                "gzip"
+            ],
+            "Content-Length": [
+                "19"
+            ],
+            "Content-Type": [
+                "application/json"
+            ],
+            "Token": [
+                "F3NlJmPWEEKp4YNkzJTxOa3th27pv7CiGvVjJl2sfmPbrT8Nk5VA2dMFDXfqcjpf"
+            ],
+            "User-Agent": [
+                "curl/8.6.0"
+            ],
+            "X-Forwarded-For": [
+                "216.58.112.229"
+            ],
+            "X-Forwarded-Host": [
+                "halo-nocode-dev.pfccgroup.cloud"
+            ],
+            "X-Forwarded-Proto": [
+                "http"
+            ]
+        },
+        "ContentLength": 19,
+        "Host": "halo-nocode-dev.pfccgroup.cloud",
+        "Form": null,
+        "PostForm": null,
+        "MultipartForm": null,
+        "RemoteAddr": "216.58.112.229",
+        "RequestURI": "/api/gateway/test_module/create_record"
+    },
+    "requestType": "Any",
+    "eventType": "",
+    "eventTypeType": "String",
+    "resourceType": "",
+    "resourceTypeType": "String",
+    "invoker": "392113051778023425",
+    "invokerType": "Any",
+    "runner": "392113051854307329",
+    "runnerType": "Any"
+}
+
